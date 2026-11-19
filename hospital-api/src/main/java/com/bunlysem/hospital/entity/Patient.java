@@ -62,4 +62,15 @@ public class Patient {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    @Column(name = "is_active", nullable = false)
+    private Integer isActive = 1;
+
+    public Integer getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
+    }
 }
