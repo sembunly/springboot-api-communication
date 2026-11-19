@@ -1,3 +1,13 @@
 spring:
   application:
     name: lis-api
+  datasource:
+    url: jdbc:mysql://localhost:8889/lis_db
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8082
