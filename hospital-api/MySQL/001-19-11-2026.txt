@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS received_payloads (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+
+    patient_code VARCHAR(100) NULL,
+
+    payload JSON NOT NULL,
+
+    is_active TINYINT(1) NOT NULL DEFAULT 1,
+
+    received_at DATETIME(6) NOT NULL
+        DEFAULT CURRENT_TIMESTAMP(6),
+
+    INDEX idx_received_payloads_patient (patient_code),
+    INDEX idx_received_payloads_active (is_active),
+    INDEX idx_received_payloads_received_at (received_at)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci;

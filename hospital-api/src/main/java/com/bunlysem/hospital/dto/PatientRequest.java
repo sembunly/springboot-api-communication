@@ -1,4 +1,3 @@
-
 package com.bunlysem.hospital.dto;
 
 import jakarta.validation.constraints.NotBlank;
